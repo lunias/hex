@@ -22,6 +22,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.function.Function;
+
 @SpringBootApplication
 public class HexApplication extends Application implements CommandLineRunner {
 
@@ -66,6 +68,8 @@ public class HexApplication extends Application implements CommandLineRunner {
         light.setTranslateX(0);
         light.setTranslateY(0);
         light.setTranslateZ(-200);
+
+        Function<Integer, Integer> f = (i) -> 2*i;
 
         Rotate mapRotate = new Rotate(0, 480, 480, 0, Rotate.Z_AXIS);
 
